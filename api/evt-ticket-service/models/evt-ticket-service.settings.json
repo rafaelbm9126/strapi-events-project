@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evt_ticket_service",
+  "info": {
+    "name": "evt_ticket_service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "evt_event_service": {
+      "model": "evt-event-service"
+    },
+    "evt_room_services": {
+      "collection": "evt-room-service"
+    }
+  }
+}

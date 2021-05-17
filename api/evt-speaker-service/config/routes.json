@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-speaker-services",
+      "handler": "evt-speaker-service.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-speaker-services/count",
+      "handler": "evt-speaker-service.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-speaker-services/:id",
+      "handler": "evt-speaker-service.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-speaker-services",
+      "handler": "evt-speaker-service.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-speaker-services/:id",
+      "handler": "evt-speaker-service.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-speaker-services/:id",
+      "handler": "evt-speaker-service.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

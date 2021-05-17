@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evt_profile_stand_manager",
+  "info": {
+    "name": "evt_profile_stand_manager",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "evt_event_service": {
+      "model": "evt-event-service"
+    }
+  }
+}

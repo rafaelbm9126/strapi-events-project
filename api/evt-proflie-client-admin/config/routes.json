@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-proflie-client-admins",
+      "handler": "evt-proflie-client-admin.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-proflie-client-admins/count",
+      "handler": "evt-proflie-client-admin.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-proflie-client-admins/:id",
+      "handler": "evt-proflie-client-admin.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-proflie-client-admins",
+      "handler": "evt-proflie-client-admin.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-proflie-client-admins/:id",
+      "handler": "evt-proflie-client-admin.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-proflie-client-admins/:id",
+      "handler": "evt-proflie-client-admin.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

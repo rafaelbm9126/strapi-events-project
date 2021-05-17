@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "evt_proflie_client_admin",
+  "info": {
+    "name": "evt_proflie_client_admin",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "evt_event_service": {
+      "model": "evt-event-service"
+    }
+  }
+}

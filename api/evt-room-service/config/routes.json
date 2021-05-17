@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-room-services",
+      "handler": "evt-room-service.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-room-services/count",
+      "handler": "evt-room-service.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-room-services/:id",
+      "handler": "evt-room-service.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-room-services",
+      "handler": "evt-room-service.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-room-services/:id",
+      "handler": "evt-room-service.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-room-services/:id",
+      "handler": "evt-room-service.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

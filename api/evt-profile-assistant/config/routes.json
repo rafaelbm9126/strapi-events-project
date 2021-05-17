@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-profile-assistants",
+      "handler": "evt-profile-assistant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-assistants/count",
+      "handler": "evt-profile-assistant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-assistants/:id",
+      "handler": "evt-profile-assistant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-profile-assistants",
+      "handler": "evt-profile-assistant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-profile-assistants/:id",
+      "handler": "evt-profile-assistant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-profile-assistants/:id",
+      "handler": "evt-profile-assistant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

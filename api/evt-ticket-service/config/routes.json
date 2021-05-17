@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-ticket-services",
+      "handler": "evt-ticket-service.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-ticket-services/count",
+      "handler": "evt-ticket-service.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-ticket-services/:id",
+      "handler": "evt-ticket-service.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-ticket-services",
+      "handler": "evt-ticket-service.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-ticket-services/:id",
+      "handler": "evt-ticket-service.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-ticket-services/:id",
+      "handler": "evt-ticket-service.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
