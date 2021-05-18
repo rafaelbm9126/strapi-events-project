@@ -582,6 +582,10 @@
             "type": "boolean",
             "default": false
           },
+          "active": {
+            "type": "boolean",
+            "default": false
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -608,6 +612,9 @@
                   "type": "string"
                 },
                 "confirmed": {
+                  "type": "boolean"
+                },
+                "active": {
                   "type": "boolean"
                 },
                 "localizations": {
@@ -655,6 +662,10 @@
             "format": "date-time"
           },
           "confirmed": {
+            "type": "boolean",
+            "default": false
+          },
+          "active": {
             "type": "boolean",
             "default": false
           },

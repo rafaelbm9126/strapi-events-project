@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "evt_proflie_client_admin",
+  "collectionName": "evt_profile_client_admin",
   "info": {
-    "name": "evt_proflie_client_admin",
+    "name": "evt_profile_client_admin",
     "description": ""
   },
   "options": {

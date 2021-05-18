@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/17/2021 6:35:07 PM"
+    "x-generation-date": "05/18/2021 1:35:32 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2141,7 +2141,7 @@
         ]
       }
     },
-    "/evt-proflie-client-admins": {
+    "/evt-profile-client-admins": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2193,7 +2193,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -2385,7 +2385,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "requestBody": {
           "description": "",
@@ -2393,14 +2393,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-proflie-client-admin"
+                "$ref": "#/components/schemas/NewEvt-profile-client-admin"
               }
             }
           }
         }
       }
     },
-    "/evt-proflie-client-admins/count": {
+    "/evt-profile-client-admins/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2452,12 +2452,12 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": []
       }
     },
-    "/evt-proflie-client-admins/{id}": {
+    "/evt-profile-client-admins/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -2509,7 +2509,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -2575,7 +2575,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "requestBody": {
           "description": "",
@@ -2583,7 +2583,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-proflie-client-admin"
+                "$ref": "#/components/schemas/NewEvt-profile-client-admin"
               }
             }
           }
@@ -2649,7 +2649,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -6597,6 +6597,10 @@
             "type": "boolean",
             "default": false
           },
+          "active": {
+            "type": "boolean",
+            "default": false
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -6623,6 +6627,9 @@
                   "type": "string"
                 },
                 "confirmed": {
+                  "type": "boolean"
+                },
+                "active": {
                   "type": "boolean"
                 },
                 "localizations": {
@@ -6670,6 +6677,10 @@
             "format": "date-time"
           },
           "confirmed": {
+            "type": "boolean",
+            "default": false
+          },
+          "active": {
             "type": "boolean",
             "default": false
           },
@@ -6774,6 +6785,9 @@
                 "type": "string"
               },
               "confirmed": {
+                "type": "boolean"
+              },
+              "active": {
                 "type": "boolean"
               },
               "localizations": {
@@ -6992,6 +7006,9 @@
               "confirmed": {
                 "type": "boolean"
               },
+              "active": {
+                "type": "boolean"
+              },
               "localizations": {
                 "type": "array",
                 "items": {
@@ -7073,7 +7090,7 @@
           }
         }
       },
-      "Evt-proflie-client-admin": {
+      "Evt-profile-client-admin": {
         "required": [
           "id"
         ],
@@ -7152,6 +7169,9 @@
               "confirmed": {
                 "type": "boolean"
               },
+              "active": {
+                "type": "boolean"
+              },
               "localizations": {
                 "type": "array",
                 "items": {
@@ -7208,7 +7228,7 @@
           }
         }
       },
-      "NewEvt-proflie-client-admin": {
+      "NewEvt-profile-client-admin": {
         "properties": {
           "users_permissions_user": {
             "type": "string"
@@ -7287,6 +7307,9 @@
                 "type": "string"
               },
               "confirmed": {
+                "type": "boolean"
+              },
+              "active": {
                 "type": "boolean"
               },
               "localizations": {
@@ -7636,6 +7659,9 @@
                 "type": "string"
               },
               "confirmed": {
+                "type": "boolean"
+              },
+              "active": {
                 "type": "boolean"
               },
               "localizations": {

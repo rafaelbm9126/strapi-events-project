@@ -1,0 +1,43 @@
+version: '3'
+services:
+
+    backend_cms:
+        image: node:latest
+        depends_on:
+            - mongo
+        ports:
+            - 1337:1337
+        expose:
+            - 1337
+        command: npm run develop
+        volumes:
+            - ${PWD}:/app
+            - /app/mongo
+        working_dir: /app
+        networks:
+            - secure
+        env_file:
+            - .env.local
+
+    mongo:
+        image: mongo:latest
+        ports:
+            - 27017:27017
+        expose:
+            - 27017
+        volumes:
+            - ./mongo:/data/db
+        networks:
+            - secure
+        logging:
+            driver: none
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: 1234
+            MONGO_INITDB_DATABASE: kardex_backend
+        env_file:
+            - .env.local
+
+networks:
+    secure:
+        driver: bridge

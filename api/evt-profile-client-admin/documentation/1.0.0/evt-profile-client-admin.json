@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/evt-proflie-client-admins": {
+    "/evt-profile-client-admins": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-proflie-client-admin"
+                "$ref": "#/components/schemas/NewEvt-profile-client-admin"
               }
             }
           }
         }
       }
     },
-    "/evt-proflie-client-admins/count": {
+    "/evt-profile-client-admins/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": []
       }
     },
-    "/evt-proflie-client-admins/{id}": {
+    "/evt-profile-client-admins/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-proflie-client-admin"
+                "$ref": "#/components/schemas/NewEvt-profile-client-admin"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-proflie-client-admin"
+          "Evt-profile-client-admin"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Evt-proflie-client-admin": {
+      "Evt-profile-client-admin": {
         "required": [
           "id"
         ],
@@ -606,6 +606,9 @@
               "confirmed": {
                 "type": "boolean"
               },
+              "active": {
+                "type": "boolean"
+              },
               "localizations": {
                 "type": "array",
                 "items": {
@@ -662,7 +665,7 @@
           }
         }
       },
-      "NewEvt-proflie-client-admin": {
+      "NewEvt-profile-client-admin": {
         "properties": {
           "users_permissions_user": {
             "type": "string"

@@ -606,6 +606,9 @@
               "confirmed": {
                 "type": "boolean"
               },
+              "active": {
+                "type": "boolean"
+              },
               "localizations": {
                 "type": "array",
                 "items": {

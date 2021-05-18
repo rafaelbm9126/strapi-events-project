@@ -1,24 +1,24 @@
 module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
-    default: {
-      connector: 'bookshelf',
-      settings: {
-        client: 'sqlite',
-        filename: env('DATABASE_FILENAME', '.tmp/data.db'),
-      },
-      options: {
-        useNullAsDefault: true,
-      },
-    },
     // default: {
-    //   connector: 'mongoose',
+    //   connector: 'bookshelf',
     //   settings: {
-    //     uri: 'mongodb+srv://admin:NtfWauA79ixTKk6y@sellbootdev.zm7kt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    //     client: 'sqlite',
+    //     filename: env('DATABASE_FILENAME', '.tmp/data.db'),
     //   },
     //   options: {
-    //     ssl: true,
+    //     useNullAsDefault: true,
     //   },
     // },
+    default: {
+      connector: 'mongoose',
+      settings: {
+        uri: env('DATABASE_URL'),
+      },
+      options: {
+        ssl: env('DATABASE_SSL'),
+      },
+    },
   },
 });
