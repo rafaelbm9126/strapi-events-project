@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/company-services": {
+    "/evt-profile-client-companies": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCompany-service"
+                "$ref": "#/components/schemas/NewEvt-profile-client-company"
               }
             }
           }
         }
       }
     },
-    "/company-services/count": {
+    "/evt-profile-client-companies/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "parameters": []
       }
     },
-    "/company-services/{id}": {
+    "/evt-profile-client-companies/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCompany-service"
+                "$ref": "#/components/schemas/NewEvt-profile-client-company"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Company-service"
+          "Evt-profile-client-company"
         ],
         "parameters": [
           {
@@ -527,19 +527,98 @@
   },
   "components": {
     "schemas": {
-      "Company-service": {
+      "Evt-profile-client-company": {
         "required": [
           "id",
-          "name",
           "email"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string",
-            "default": "name"
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "users_permissions_user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "evt_company_service": {
+            "required": [
+              "id",
+              "name",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "localizations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "locale": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "email": {
             "type": "string"
@@ -549,14 +628,22 @@
             "items": {
               "required": [
                 "id",
-                "name",
                 "email"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "name": {
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "users_permissions_user": {
+                  "type": "string"
+                },
+                "evt_company_service": {
                   "type": "string"
                 },
                 "email": {
@@ -585,15 +672,22 @@
           }
         }
       },
-      "NewCompany-service": {
+      "NewEvt-profile-client-company": {
         "required": [
-          "name",
           "email"
         ],
         "properties": {
-          "name": {
-            "type": "string",
-            "default": "name"
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "users_permissions_user": {
+            "type": "string"
+          },
+          "evt_company_service": {
+            "type": "string"
           },
           "email": {
             "type": "string"

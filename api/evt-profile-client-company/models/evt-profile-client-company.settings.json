@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "evt_company_service",
+  "collectionName": "evt_profile_client_company",
   "info": {
-    "name": "evt_company_service",
+    "name": "evt_profile_client_company",
     "description": ""
   },
   "options": {
@@ -16,15 +16,28 @@
     }
   },
   "attributes": {
-    "name": {
+    "first_name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
-      "default": "name",
-      "required": true
+      "type": "string"
+    },
+    "last_name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "evt_company_service": {
+      "model": "company-service"
     },
     "email": {
       "pluginOptions": {

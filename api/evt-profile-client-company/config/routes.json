@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-companies",
+      "handler": "evt-profile-client-company.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-companies/count",
+      "handler": "evt-profile-client-company.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-companies/:id",
+      "handler": "evt-profile-client-company.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-profile-client-companies",
+      "handler": "evt-profile-client-company.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-profile-client-companies/:id",
+      "handler": "evt-profile-client-company.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-profile-client-companies/:id",
+      "handler": "evt-profile-client-company.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

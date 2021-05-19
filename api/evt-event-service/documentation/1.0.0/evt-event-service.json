@@ -541,13 +541,17 @@
           "evt_company_service": {
             "required": [
               "id",
-              "name"
+              "name",
+              "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
               "name": {
+                "type": "string"
+              },
+              "email": {
                 "type": "string"
               },
               "localizations": {
