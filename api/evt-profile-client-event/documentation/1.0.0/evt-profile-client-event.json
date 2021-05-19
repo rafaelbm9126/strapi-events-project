@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/evt-profile-stand-managers": {
+    "/evt-profile-client-events": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-profile-stand-manager"
+                "$ref": "#/components/schemas/NewEvt-profile-client-event"
               }
             }
           }
         }
       }
     },
-    "/evt-profile-stand-managers/count": {
+    "/evt-profile-client-events/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "parameters": []
       }
     },
-    "/evt-profile-stand-managers/{id}": {
+    "/evt-profile-client-events/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEvt-profile-stand-manager"
+                "$ref": "#/components/schemas/NewEvt-profile-client-event"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Evt-profile-stand-manager"
+          "Evt-profile-client-event"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Evt-profile-stand-manager": {
+      "Evt-profile-client-event": {
         "required": [
           "id"
         ],
@@ -535,41 +535,37 @@
           "id": {
             "type": "string"
           },
-          "users_permissions_user": {
+          "evt_profile_client_company": {
             "required": [
               "id",
-              "username",
               "email"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "first_name": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "evt_company_service": {
                 "type": "string"
               },
               "email": {
                 "type": "string"
               },
-              "provider": {
-                "type": "string"
+              "localizations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
+              "locale": {
                 "type": "string"
               },
               "created_by": {
@@ -636,7 +632,7 @@
                 "id": {
                   "type": "string"
                 },
-                "users_permissions_user": {
+                "evt_profile_client_company": {
                   "type": "string"
                 },
                 "evt_event_service": {
@@ -665,9 +661,9 @@
           }
         }
       },
-      "NewEvt-profile-stand-manager": {
+      "NewEvt-profile-client-event": {
         "properties": {
-          "users_permissions_user": {
+          "evt_profile_client_company": {
             "type": "string"
           },
           "evt_event_service": {

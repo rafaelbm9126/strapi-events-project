@@ -1,20 +1,20 @@
 'use strict';
 
+const model = 'evt-profile-client-event';
+
 /**
  * only ClientAdmin & StandManager
  *
- * @param {String} model
- * @param {String} IDUser
+ * @param {String} IDProfileUser
  * @param {String} IDEvent
  * @returns
  */
 module.exports = async (
-  model,
-  IDUser,
+  IDProfileUser,
   IDEvent,
 ) => {
   return await strapi.api[model].services[model].create({
-    users_permissions_user: IDUser,
+    evt_profile_client_company: IDProfileUser,
     evt_event_service: IDEvent,
   });
 };

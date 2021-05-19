@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "evt_profile_client_admin",
+  "collectionName": "evt_profile_client_event",
   "info": {
-    "name": "evt_profile_client_admin",
-    "description": ""
+    "name": "evt_profile_client_event"
   },
   "options": {
     "increments": true,
@@ -16,9 +15,8 @@
     }
   },
   "attributes": {
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
+    "evt_profile_client_company": {
+      "model": "evt-profile-client-company"
     },
     "evt_event_service": {
       "model": "evt-event-service"

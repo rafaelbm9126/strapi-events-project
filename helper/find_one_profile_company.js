@@ -1,6 +1,6 @@
 'use strict';
 
-const profileWithCompany = 'evt-profile-client-company';
+const model = 'evt-profile-client-company';
 
 /**
  *
@@ -8,5 +8,5 @@ const profileWithCompany = 'evt-profile-client-company';
  * @returns
  */
 module.exports = async (email) => {
-  return await strapi.query(profileWithCompany).findOne({ email });
+  return await strapi.query(model).findOne({ email });
 };

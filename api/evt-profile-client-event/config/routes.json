@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-events",
+      "handler": "evt-profile-client-event.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-events/count",
+      "handler": "evt-profile-client-event.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/evt-profile-client-events/:id",
+      "handler": "evt-profile-client-event.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/evt-profile-client-events",
+      "handler": "evt-profile-client-event.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/evt-profile-client-events/:id",
+      "handler": "evt-profile-client-event.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/evt-profile-client-events/:id",
+      "handler": "evt-profile-client-event.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
