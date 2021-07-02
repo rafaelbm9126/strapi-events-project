@@ -35,6 +35,10 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "admin_appearance": {
+      "model": "admin-appearance",
+      "via": "evt_company_service"
     }
   }
 }

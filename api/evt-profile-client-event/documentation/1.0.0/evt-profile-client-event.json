@@ -559,6 +559,9 @@
               "email": {
                 "type": "string"
               },
+              "users_permissions_role": {
+                "type": "string"
+              },
               "localizations": {
                 "type": "array",
                 "items": {

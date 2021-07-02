@@ -544,6 +544,31 @@
           "email": {
             "type": "string"
           },
+          "admin_appearance": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "colors": {
+                "type": "object"
+              },
+              "evt_company_service": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -560,6 +585,9 @@
                   "type": "string"
                 },
                 "email": {
+                  "type": "string"
+                },
+                "admin_appearance": {
                   "type": "string"
                 },
                 "localizations": {
@@ -596,6 +624,9 @@
             "default": "name"
           },
           "email": {
+            "type": "string"
+          },
+          "admin_appearance": {
             "type": "string"
           },
           "localizations": {

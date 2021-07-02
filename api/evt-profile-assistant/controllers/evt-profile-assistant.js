@@ -1,8 +1,9 @@
 'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+const model = "evt-profile-assistant";
 
-module.exports = {};
+module.exports = {
+  async assistantsCount(params) {
+    return await strapi.api[model].services[model].count(params.where || {});
+  },
+};

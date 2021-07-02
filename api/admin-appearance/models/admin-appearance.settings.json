@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admin_appearance",
+  "info": {
+    "name": "admin_appearance",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "colors": {
+      "type": "json"
+    },
+    "evt_company_service": {
+      "via": "admin_appearance",
+      "model": "company-service"
+    }
+  }
+}

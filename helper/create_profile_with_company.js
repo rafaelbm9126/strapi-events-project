@@ -9,6 +9,7 @@ const profileWithCompany = 'evt-profile-client-company';
  * @param {String} last_name
  * @param {ID} users_permissions_user
  * @param {ID} evt_company_service
+ * @param {ID} users_permissions_role
  * @returns
  */
 module.exports = async (
@@ -17,6 +18,7 @@ module.exports = async (
   last_name = '',
   users_permissions_user,
   evt_company_service,
+  users_permissions_role,
 ) => {
   return await strapi.api[profileWithCompany].services[profileWithCompany].create({
     email,
@@ -24,5 +26,6 @@ module.exports = async (
     last_name,
     users_permissions_user,
     evt_company_service,
+    users_permissions_role,
   });
 };

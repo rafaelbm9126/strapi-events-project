@@ -1,23 +1,57 @@
 version: '3'
 services:
 
-    backend_cms:
-        image: node:latest
-        # depends_on:
-        #     - mongo
-        ports:
-            - 1337:1337
-        expose:
-            - 1337
-        command: npm run develop
-        volumes:
-            - ${PWD}:/app
-            # - /app/mongo
-        working_dir: /app
-        networks:
-            - secure
-        env_file:
-            - .env
+  backend_cms:
+    image: node:latest
+    # depends_on:
+    #     - mongo
+    ports:
+      - 1337:1337
+    expose:
+      - 1337
+    command: npm run develop
+    volumes:
+      - ${PWD}:/app
+      # - /app/mongo
+    working_dir: /app
+    networks:
+      - secure
+    env_file:
+      - .env
+
+  client_center:
+    image: node:latest
+    depends_on:
+      - backend_cms
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    command: npm run dev
+    volumes:
+      - ${PWD}/../client-center-events:/app
+    working_dir: /app
+    networks:
+      - secure
+    env_file:
+      - .env
+
+  massive:
+    image: upload-massive-custom:latest
+    depends_on:
+      - backend_cms
+    ports:
+      - "8000:8000"
+    expose:
+      - "8000"
+    command: sh start.sh
+    volumes:
+      - ../events-load-massive/src:/var/src
+    working_dir: /var/src
+    networks:
+      - secure
+    env_file:
+      - .env
 
     # mongo:
     #     image: mongo:latest
@@ -39,5 +73,5 @@ services:
     #         - .env.local
 
 networks:
-    secure:
-        driver: bridge
+  secure:
+    driver: bridge

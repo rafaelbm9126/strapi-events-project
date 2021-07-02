@@ -554,6 +554,9 @@
               "email": {
                 "type": "string"
               },
+              "admin_appearance": {
+                "type": "string"
+              },
               "localizations": {
                 "type": "array",
                 "items": {

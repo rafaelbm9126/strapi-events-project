@@ -2,54 +2,50 @@ const model = "evt-profile-client-event";
 
 module.exports = {
   definition: `
-    input CreateUserClientEvent {
-      username: String!
-      email: String!
-      company: ID!
-      event: ID!
-      role: ID!
-      first_name: String
-      last_name: String
+    enum UserRole {
+      ClientAnalyst
+      SuperStand
+      StandManager
+      StandAttendant
     }
-    type CreateUserClientEventPayload {
-      id: ID
-    }
-    input CreateStandManagerEvent {
+    input CreateCompanyUserEventInput {
       username: String!
       email: String!
       company: ID!
       event: ID!
       first_name: String
       last_name: String
+      role: UserRole
     }
-    type CreateStandManagerEventPayload {
+    type CreateCompanyUserEventPayload {
       id: ID
+      linkActivate: String
     }
   `,
   query: ``,
   mutation: `
-    createUserClientEvent(input: CreateUserClientEvent!): CreateUserClientEventPayload
-    createStandManagerEvent(input: CreateStandManagerEvent!): CreateStandManagerEventPayload
+    createClientAdminEvent(input: CreateCompanyUserEventInput!): CreateCompanyUserEventPayload
+    createCompanyUsersEvent(input: CreateCompanyUserEventInput!): CreateCompanyUserEventPayload
   `,
   resolver: {
     Query: {},
     Mutation: {
-      createUserClientEvent: {
-        description: "Create account user Client (Admin or StandManager)",
+      createClientAdminEvent: {
+        description: "Create Company / Event / ClientAdmin",
         policies: [],
-        resolverOf: `application::${model}.${model}.createUserClientEvent`,
+        resolverOf: `application::${model}.${model}.createClientAdminEvent`,
         resolver: async (obj, options, ctx) => {
-          return strapi.api[model].controllers[model].createUserClientEvent(
+          return strapi.api[model].controllers[model].createClientAdminEvent(
             options
           );
         },
       },
-      createStandManagerEvent: {
-        description: "Create account user Client (StandManager)",
+      createCompanyUsersEvent: {
+        description: "Create stack users of event-compny",
         policies: [],
-        resolverOf: `application::${model}.${model}.createStandManagerEvent`,
+        resolverOf: `application::${model}.${model}.createCompanyUsersEvent`,
         resolver: async (obj, options, ctx) => {
-          return strapi.api[model].controllers[model].createStandManagerEvent(
+          return strapi.api[model].controllers[model].createCompanyUsersEvent(
             options
           );
         },

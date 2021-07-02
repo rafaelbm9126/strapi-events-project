@@ -34,15 +34,25 @@
       "type": "string",
       "required": false
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "evt_event_service": {
       "model": "evt-event-service"
     },
     "evt_ticket_service": {
       "model": "evt-ticket-service"
+    },
+    "users_permissions_role": {
+      "plugin": "users-permissions",
+      "model": "role"
+    },
+    "email": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

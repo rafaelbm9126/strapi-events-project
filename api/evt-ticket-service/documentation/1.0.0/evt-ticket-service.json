@@ -529,7 +529,8 @@
     "schemas": {
       "Evt-ticket-service": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
@@ -632,11 +633,19 @@
               }
             }
           },
+          "full_access": {
+            "type": "boolean",
+            "default": false
+          },
+          "name": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "name"
               ],
               "properties": {
                 "id": {
@@ -650,6 +659,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "full_access": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "string"
                 },
                 "localizations": {
                   "type": "array",
@@ -675,6 +690,9 @@
         }
       },
       "NewEvt-ticket-service": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "evt_event_service": {
             "type": "string"
@@ -684,6 +702,13 @@
             "items": {
               "type": "string"
             }
+          },
+          "full_access": {
+            "type": "boolean",
+            "default": false
+          },
+          "name": {
+            "type": "string"
           },
           "localizations": {
             "type": "array",

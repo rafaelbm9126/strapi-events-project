@@ -530,7 +530,8 @@
       "Evt-profile-assistant": {
         "required": [
           "id",
-          "first_name"
+          "first_name",
+          "email"
         ],
         "properties": {
           "id": {
@@ -541,51 +542,6 @@
           },
           "last_name": {
             "type": "string"
-          },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "evt_event_service": {
             "required": [
@@ -635,7 +591,8 @@
           },
           "evt_ticket_service": {
             "required": [
-              "id"
+              "id",
+              "name"
             ],
             "properties": {
               "id": {
@@ -649,6 +606,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "full_access": {
+                "type": "boolean"
+              },
+              "name": {
+                "type": "string"
               },
               "localizations": {
                 "type": "array",
@@ -667,12 +630,54 @@
               }
             }
           },
+          "users_permissions_role": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "email": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "first_name"
+                "first_name",
+                "email"
               ],
               "properties": {
                 "id": {
@@ -684,13 +689,16 @@
                 "last_name": {
                   "type": "string"
                 },
-                "users_permissions_user": {
-                  "type": "string"
-                },
                 "evt_event_service": {
                   "type": "string"
                 },
                 "evt_ticket_service": {
+                  "type": "string"
+                },
+                "users_permissions_role": {
+                  "type": "string"
+                },
+                "email": {
                   "type": "string"
                 },
                 "localizations": {
@@ -718,7 +726,8 @@
       },
       "NewEvt-profile-assistant": {
         "required": [
-          "first_name"
+          "first_name",
+          "email"
         ],
         "properties": {
           "first_name": {
@@ -727,13 +736,16 @@
           "last_name": {
             "type": "string"
           },
-          "users_permissions_user": {
-            "type": "string"
-          },
           "evt_event_service": {
             "type": "string"
           },
           "evt_ticket_service": {
+            "type": "string"
+          },
+          "users_permissions_role": {
+            "type": "string"
+          },
+          "email": {
             "type": "string"
           },
           "localizations": {

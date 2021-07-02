@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/admin-appearances",
+      "handler": "admin-appearance.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-appearances/count",
+      "handler": "admin-appearance.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-appearances/:id",
+      "handler": "admin-appearance.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/admin-appearances",
+      "handler": "admin-appearance.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/admin-appearances/:id",
+      "handler": "admin-appearance.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/admin-appearances/:id",
+      "handler": "admin-appearance.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

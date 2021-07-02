@@ -603,6 +603,9 @@
               "email": {
                 "type": "string"
               },
+              "admin_appearance": {
+                "type": "string"
+              },
               "localizations": {
                 "type": "array",
                 "items": {
@@ -622,6 +625,44 @@
           },
           "email": {
             "type": "string"
+          },
+          "users_permissions_role": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "localizations": {
             "type": "array",
@@ -647,6 +688,9 @@
                   "type": "string"
                 },
                 "email": {
+                  "type": "string"
+                },
+                "users_permissions_role": {
                   "type": "string"
                 },
                 "localizations": {
@@ -690,6 +734,9 @@
             "type": "string"
           },
           "email": {
+            "type": "string"
+          },
+          "users_permissions_role": {
             "type": "string"
           },
           "localizations": {

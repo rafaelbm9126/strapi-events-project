@@ -19,6 +19,7 @@ module.exports = async (
   confirmed = false,
 ) => {
   try {
+    const resetPasswordToken = confirmationToken;
     return await new Promise((resolve, reject) => {
       strapi.plugins['users-permissions'].controllers.user.create({
         request: {
@@ -28,6 +29,7 @@ module.exports = async (
             password,
             role: IDRole,
             confirmationToken,
+            resetPasswordToken,
             confirmed,
           }
         },
@@ -47,6 +49,7 @@ module.exports = async (
       });
     });
   } catch (error) {
+    console.log(error);
     throw new Error('[Error]: create user');
   }
 };

@@ -48,6 +48,10 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "users_permissions_role": {
+      "plugin": "users-permissions",
+      "model": "role"
     }
   }
 }

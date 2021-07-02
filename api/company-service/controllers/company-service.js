@@ -1,8 +1,14 @@
 'use strict';
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#core-controllers)
- * to customize this controller
- */
+const model = "company-service";
 
-module.exports = {};
+module.exports = {
+  async companyCount(params) {
+    return await strapi.api[model].services[model].count(params.where || {});
+  },
+  async companyFindManyIds(params) {
+    return await strapi.api[model].services[model].find({
+      id: { $in: params.ids },
+    });
+  },
+};
